@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>1x1 Scheduler - CareerCarve</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>1x1 Mock Interview Scheduler</h1>
+    </header>
+
+    <main>
+        <section>
+            <form id="scheduler-form" onsubmit="handleFormSubmission(event)">
+                <label for="area">Area of Interest:</label>
+                <select id="area" name="area" required>
+                    <option value="fmcg-sales">FMCG Sales</option>
+                    <option value="equity-research">Equity Research</option>
+                    <option value="digital-marketing">Digital Marketing</option>
+                    <!-- Add more options as needed -->
+                </select>
+
+                <label for="mentor">Preferred Mentor (Optional):</label>
+                <input type="text" id="mentor" name="mentor" placeholder="Enter Mentor Name">
+
+                <label for="duration">Session Duration:</label>
+                <select id="duration" name="duration" required>
+                    <option value="30">30 minutes</option>
+                    <option value="45">45 minutes</option>
+                    <option value="60">60 minutes</option>
+                </select>
+
+                <button type="submit">Schedule Session</button>
+            </form>
+        </section>
+
+        <section id="confirmation" style="display: none;">
+            <h2>Session Confirmation</h2>
+            <p id="session-details"></p>
+            <p id="total-amount"></p>
+            <button onclick="confirmSession()">Confirm and Proceed to Payment</button>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 CareerCarve</p>
+    </footer>
+
+    <script src="app.js"></script>
+</body>
+</html>

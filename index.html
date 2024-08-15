@@ -13,7 +13,48 @@
             <!-- Adding logo image -->
             <img src="careercarvelogo.png" alt="CareerCarve Logo" class="navbar-logo">
         <h1>Welcome to CareerCarve !</h1>
-        </div>
+         <!-- The modal popup container -->
+  <div class="modal" id="signInModal">
+    <!-- The modal popup content -->
+    <div class="modal-content">
+      <span class="close" id="closeModal">&times;</span>
+      <h2>Sign In</h2>
+      <form id="signInForm">
+        <label for="username">Username:</label>
+        <input type="text" id="username" name="username"><br><br>
+        <label for="password">Password:</label>
+        <input type="password" id="password" name="password"><br><br>
+        <input type="submit" value="Sign In">
+       </form>
+          <p>Don't have an account? <a href="#" id="registerLink">Register</a></p>
+     </div>
+   </div>
+  
+  <!-- The register  popup container -->
+  <div class="modal" id="registerModal">
+    <!-- The modal popup content -->
+    <div class="modal-content">
+      <span class="close" id="closeRegisterModal">&times;</span>
+      <h2>Register</h2>
+      <form id="registerForm">
+        <label for="username">Username:</label>
+        <input type="text" id="username" name="username"><br><br>
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email"><br><br>
+        <label for="password">Password:</label>
+        <input type="password" id="password" name="password"><br><br>
+        <label for="confirmPassword">Confirm Password:</label>
+        <input type="password" id="confirmPassword" name="confirmPassword"><br><br>
+        <input type="submit" value="Register">
+      </form>
+      <p>Already have an account? <a href="#" id="signInLink">Sign In</a></p>
+    </div>
+  </div>
+  
+  <!-- The button to trigger the modal popup -->
+  <button id="signInButton"><h4>Sign In</h4></button>
+  <button id="registerButton"><h4>Register</h4></button>
+ </div>
     <div  class="navbar">
          <nav>
             <img src="CareerCarvename.png" alt="CareerCarve Logo" class="navbar-logo">

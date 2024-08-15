@@ -1,3 +1,75 @@
+// Get the modal popup containers
+var signInModal = document.getElementById("signInModal");
+var registerModal = document.getElementById("registerModal");
+
+// Get the buttons to trigger the modal popups
+var signInButton = document.getElementById("signInButton");
+var registerButton = document.getElementById("registerButton");
+
+// Get the close buttons
+var closeModal = document.getElementById("closeModal");
+var closeRegisterModal = document.getElementById("closeRegisterModal");
+
+// Get the links to switch between sign in and register
+var registerLink = document.getElementById("registerLink");
+var signInLink = document.getElementById("signInLink");
+
+// When the user clicks the sign in button, open the sign in modal popup
+signInButton.addEventListener("click", function() {
+  signInModal.style.display = "block";
+});
+
+// When the user clicks the register button, open the register modal popup
+registerButton.addEventListener("click", function() {
+  registerModal.style.display = "block";
+});
+
+// When the user clicks the close button, close the modal popup
+closeModal.addEventListener("click", function() {
+  signInModal.style.display = "none";
+});
+
+closeRegisterModal.addEventListener("click", function() {
+  registerModal.style.display = "none";
+});
+
+// When the user clicks outside the modal popup, close it
+window.addEventListener("click", function(event) {
+  if (event.target == signInModal) {
+    signInModal.style.display = "none";
+  }
+  if (event.target == registerModal) {
+    registerModal.style.display = "none";
+  }
+});
+
+// When the user clicks the register link, switch to the register modal popup
+registerLink.addEventListener("click", function() {
+  signInModal.style.display = "none";
+  registerModal.style.display = "block";
+});
+
+// When the user clicks the sign in link, switch to the sign in modal popup
+signInLink.addEventListener("click", function() {
+  registerModal.style.display = "none";
+  signInModal.style.display = "block";
+});
+
+// Add event listeners to the form submit buttons
+document.getElementById("signInForm").addEventListener("submit", function(event) {
+  event.preventDefault();
+  // TO DO: Add sign in logic here
+  console.log("Sign in form submitted");
+});
+
+document.getElementById("registerForm").addEventListener("submit", function(event) {
+  event.preventDefault();
+  // TO DO: Add register logic here
+  console.log("Register form submitted");
+});
+
+
+
 // Sample data for mentors and availability
 const mentors = {
     "fmcg-sales": [

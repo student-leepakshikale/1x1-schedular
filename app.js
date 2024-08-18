@@ -70,6 +70,15 @@ document.getElementById("registerForm").addEventListener("submit", function(even
 
 
 
+
+
+
+
+
+
+
+
+
 // Sample data for mentors and availability
 const mentors = {
     "fmcg-sales": [

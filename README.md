@@ -1,1 +1,1 @@
-# 1x1-schedular
+# 1x1-scheduler
